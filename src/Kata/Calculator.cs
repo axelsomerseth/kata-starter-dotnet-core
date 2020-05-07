@@ -1,3 +1,5 @@
+using System;
+
 namespace Kata.Spec
 {
     public class Calculator
@@ -9,7 +11,7 @@ namespace Kata.Spec
                 return 0;                
             }
 
-            var parts = number.Split(",");
+            var parts = number.Split( new[] {",","\n"}, StringSplitOptions.None);
             if (parts.Length == 1)
             {
                 return int.Parse(parts[0]);
