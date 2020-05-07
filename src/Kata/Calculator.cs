@@ -14,6 +14,15 @@ namespace Kata.Spec
             {
                 return int.Parse(parts[0]);
             }
+            else if (parts.Length >= 2)
+            {
+                var accum = 0;
+                for (int i = 0; i < parts.Length; i++)
+                {
+                    accum += int.Parse((parts[i]));
+                }
+                return accum;
+            }
 
             return int.Parse(parts[0]) + int.Parse(parts[1]);
         }
